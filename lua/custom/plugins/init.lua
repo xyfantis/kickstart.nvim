@@ -5,4 +5,5 @@
 return {
   require 'custom.plugins.alpha',
   require 'custom.plugins.neogit',
+  require 'custom.plugins.remote',
 }
