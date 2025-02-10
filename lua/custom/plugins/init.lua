@@ -4,6 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
   require 'custom.plugins.alpha',
-  require 'custom.plugins.neogit',
+  require 'custom.plugins.neo-git',
   require 'custom.plugins.remote',
+  require 'custom.plugins.rest',
 }
