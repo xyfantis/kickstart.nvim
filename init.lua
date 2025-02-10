@@ -914,7 +914,6 @@ require('lazy').setup({
         'vim',
         'vimdoc',
         'php',
-        'blade',
         'yaml',
         'xml',
         'csv',
