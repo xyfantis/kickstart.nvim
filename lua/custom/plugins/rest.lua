@@ -7,12 +7,14 @@ return {
       table.insert(opts.ensure_installed, 'http')
     end,
   },
-  init = function()
-    vim.bo.formatexpr = ''
-    vim.bo.formatprg = 'jq'
-  end,
   config = function()
     vim.keymap.set('n', '<leader>rr', '<cmd>Rest run<CR>', { desc = 'Run rest command' })
     vim.keymap.set('n', '<leader>re', '<cmd>Rest env select<CR>', { desc = 'Select rest env' })
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = { 'json' },
+      callback = function()
+        vim.api.nvim_set_option_value('formatprg', 'jq', { scope = 'local' })
+      end,
+    })
   end,
 }
